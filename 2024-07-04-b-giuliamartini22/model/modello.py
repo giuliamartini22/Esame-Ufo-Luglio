@@ -57,3 +57,7 @@ class Model:
 
     def getConnectedComponents(self):
         return nx.number_connected_components(self._grafo)
+
+
+
+Ciao Eli! Spero tu reisca a vedere! Quanto fa 2+2?
