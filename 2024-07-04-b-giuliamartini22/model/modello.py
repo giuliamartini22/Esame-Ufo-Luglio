@@ -60,4 +60,4 @@ class Model:
 
 
 
-Ciao Eli! Spero tu reisca a vedere! Quanto fa 2+2?
+Ciao Eli! Spero tu riesca a vedere! Quanto fa 2+2?
