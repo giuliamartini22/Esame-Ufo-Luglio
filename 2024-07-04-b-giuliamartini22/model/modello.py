@@ -101,6 +101,25 @@ Come ti sembra?
         cursor.close()
         conn.close()
         return result
+
+    def buildGraph(self, anno, min, max):
+        self._nodi = DAO.get_all_sightings(anno, min, max)
+        for s in self._nodi:
+            self._idMap[s.id] = s #id -> sighting
+
+        self._grafo.add_nodes_from(self._nodi)
+        print(len(self._nodi))
+        self._archi = DAO.getAllEdges(anno, min, max)
+
+        for e in self._archi:
+            if e[1] < e[3]:
+                self._grafo.add_edge(self._idMap[e[0]], self._idMap[e[2]])
+            elif e[1] > e[3]:
+                self._grafo.add_edge(self._idMap[e[2]], self._idMap[e[0]])
+            elif e[1] == e[3]:
+                self._grafo.add_edge(self._idMap[e[0]], self._idMap[e[2]])
+                self._grafo.add_edge(self._idMap[e[2]], self._idMap[e[0]])
+
 maggiore. Se i due avvistamenti hanno la stessa durata, l’arco va aggiunto in entrambe le direzioni!
 c. Analizzare il grafo, verificando le diverse durate di avvistamenti presenti nel grafo e per ognuna di esse 
 stampare il numero di nodi corrispondenti (vedere screenshot di sotto per maggiore chiarezza).
