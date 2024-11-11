@@ -72,6 +72,34 @@ colonna datetime del database) dall’utente e con una durata compresa fra gli e
 • Un arco fra due avvistamenti esiste se e solo se tali avvistamenti hanno la stessa forma (colonna 
 “shape” del db). 
 • L’arco è uscente dall’avvistamento che ha durata minore ed entrante nell’avvistamento con durata 
+
+Come ti sembra?
+@staticmethod
+    def getAllEdges(anno, min, max):
+        conn = DBConnect.get_connection()
+
+        result = []
+
+        cursor = conn.cursor(dictionary=True)
+        query = """select s1.id as s1, s1.duration as d1, s2.id as s2, s2.duration as d2
+                    from sighting s1, sighting s2 
+                    where year(s1.`datetime`) = %s
+                    and year(s2.`datetime`) = %s
+                    and s1.duration > %s
+                    and s1.duration < %s
+                    and s2.duration > %s
+                    and s2.duration < %s
+                    and s1.shape = s2.shape 
+                    group by s1.id, s2.id """
+
+        cursor.execute(query, (anno, anno, min, max, min, max))
+
+        for row in cursor:
+            result.append((row["s1"], row["d1"], row["s2"], row["d2"]))
+
+        cursor.close()
+        conn.close()
+        return result
 maggiore. Se i due avvistamenti hanno la stessa durata, l’arco va aggiunto in entrambe le direzioni!
 c. Analizzare il grafo, verificando le diverse durate di avvistamenti presenti nel grafo e per ognuna di esse 
 stampare il numero di nodi corrispondenti (vedere screenshot di sotto per maggiore chiarezza).
