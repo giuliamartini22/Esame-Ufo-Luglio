@@ -72,7 +72,7 @@ colonna datetime del database) dall’utente e con una durata compresa fra gli e
 • Un arco fra due avvistamenti esiste se e solo se tali avvistamenti hanno la stessa forma (colonna 
 “shape” del db). 
 • L’arco è uscente dall’avvistamento che ha durata minore ed entrante nell’avvistamento con durata 
-
+FUNZIONAAAAAA
 Come ti sembra?
 @staticmethod
     def getAllEdges(anno, min, max):
@@ -89,6 +89,7 @@ Come ti sembra?
                     and s1.duration < %s
                     and s2.duration > %s
                     and s2.duration < %s
+                    and s1.id <> s2.id
                     and s1.shape = s2.shape 
                     group by s1.id, s2.id """
 
