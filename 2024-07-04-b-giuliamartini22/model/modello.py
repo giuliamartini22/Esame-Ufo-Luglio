@@ -60,5 +60,19 @@ class Model:
 
 
 
-Ciao Eli! Spero tu riesca a vedere! Quanto fa 2+2?
-Ciao Dani! 3+3?
+Permettere all’utente di scrivere in un campo di testo un valore intero compreso fra la durata minima e 
+massima degli avvistamenti registrati nel database. I valori minimi e massimi vanno letti dal database e non 
+specificati a mano. Inoltre, si permetta all’utente di selezionare un anno desiderato tramite un menù a 
+tendina che contiene tutti gli anni registrati nel database ordinati in senso decrescente (fare riferimento alla 
+colonna datetime del database). 
+b. Facendo click sul bottone Crea Grafo, creare un grafo diretto non pesato, i cui vertici siano tutti gli 
+avvistamenti presenti nella tabella “sighting” che siano avvenuti nell’anno selezionato (fare riferimento alla 
+colonna datetime del database) dall’utente e con una durata compresa fra gli estremi specificati 
+(strettamente).
+• Un arco fra due avvistamenti esiste se e solo se tali avvistamenti hanno la stessa forma (colonna 
+“shape” del db). 
+• L’arco è uscente dall’avvistamento che ha durata minore ed entrante nell’avvistamento con durata 
+maggiore. Se i due avvistamenti hanno la stessa durata, l’arco va aggiunto in entrambe le direzioni!
+c. Analizzare il grafo, verificando le diverse durate di avvistamenti presenti nel grafo e per ognuna di esse 
+stampare il numero di nodi corrispondenti (vedere screenshot di sotto per maggiore chiarezza).
+Inoltre, stampare anche la durata media degli avvistamenti presenti nel grafo
