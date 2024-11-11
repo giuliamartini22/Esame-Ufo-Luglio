@@ -130,3 +130,4 @@ SI VIENE GIUSTO, PUOI FARE LA PARTE C? è UNA FUNZIONA DA FARE NEL MODEL, IO INT
 
 
 Non ho capito se è da mettere nel model o nel controller, sembra che stampi solo le cose ma sulla console
+NON FUNZIONA!
