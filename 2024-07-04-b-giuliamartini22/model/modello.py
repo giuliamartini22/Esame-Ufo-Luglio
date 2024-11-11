@@ -140,7 +140,7 @@ KeyError: 'duration'
 
 io non ho messo una durata nel grafo, devo mettere un attributo?
 
-
+questo è il model
     def buildGraph(self, anno, min, max):
         self._nodi = DAO.get_all_sightings(anno, min, max)
         for s in self._nodi:
