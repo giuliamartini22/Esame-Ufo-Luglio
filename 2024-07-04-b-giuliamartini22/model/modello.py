@@ -139,3 +139,22 @@ File "C:\Users\S283956\PycharmProjects\2024-11-11-a-giuliamartini22\model\modell
 KeyError: 'duration'
 
 io non ho messo una durata nel grafo, devo mettere un attributo?
+
+
+    def buildGraph(self, anno, min, max):
+        self._nodi = DAO.get_all_sightings(anno, min, max)
+        for s in self._nodi:
+            self._idMap[s.id] = s #id -> sighting
+
+        self._grafo.add_nodes_from(self._nodi)
+        print(len(self._nodi))
+        self._archi = DAO.getAllEdges(anno, min, max)
+
+        for e in self._archi:
+            if e[1] < e[3]:
+                self._grafo.add_edge(self._idMap[e[0]], self._idMap[e[2]])
+            elif e[1] > e[3]:
+                self._grafo.add_edge(self._idMap[e[2]], self._idMap[e[0]])
+            elif e[1] == e[3]:
+                self._grafo.add_edge(self._idMap[e[0]], self._idMap[e[2]])
+                self._grafo.add_edge(self._idMap[e[2]], self._idMap[e[0]])
