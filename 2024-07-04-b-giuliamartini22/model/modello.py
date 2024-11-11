@@ -124,3 +124,6 @@ maggiore. Se i due avvistamenti hanno la stessa durata, l’arco va aggiunto in 
 c. Analizzare il grafo, verificando le diverse durate di avvistamenti presenti nel grafo e per ognuna di esse 
 stampare il numero di nodi corrispondenti (vedere screenshot di sotto per maggiore chiarezza).
 Inoltre, stampare anche la durata media degli avvistamenti presenti nel grafo
+
+
+SI VIENE GIUSTO, PUOI FARE LA PARTE C? è UNA FUNZIONA DA FARE NEL MODEL, IO INTANTO FACCIO MIN E MAX PER I CAMPI DI TESTO
