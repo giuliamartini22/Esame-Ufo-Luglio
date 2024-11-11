@@ -131,3 +131,11 @@ SI VIENE GIUSTO, PUOI FARE LA PARTE C? è UNA FUNZIONA DA FARE NEL MODEL, IO INT
 
 Non ho capito se è da mettere nel model o nel controller, sembra che stampi solo le cose ma sulla console
 NON FUNZIONA!
+
+eli mi da questo errore 
+File "C:\Users\S283956\PycharmProjects\2024-11-11-a-giuliamartini22\model\modello.py", line 73, in analizza_grafo
+    duration = node[1]['duration']
+               ~~~~~~~^^^^^^^^^^^^
+KeyError: 'duration'
+
+io non ho messo una durata nel grafo, devo mettere un attributo?
