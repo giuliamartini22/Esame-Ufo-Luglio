@@ -127,3 +127,6 @@ Inoltre, stampare anche la durata media degli avvistamenti presenti nel grafo
 
 
 SI VIENE GIUSTO, PUOI FARE LA PARTE C? è UNA FUNZIONA DA FARE NEL MODEL, IO INTANTO FACCIO MIN E MAX PER I CAMPI DI TESTO
+
+
+Non ho capito se è da mettere nel model o nel controller, sembra che stampi solo le cose ma sulla console
